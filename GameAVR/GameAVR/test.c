@@ -1,7 +1,7 @@
 /*
  * test.c
  *
- * Created: 17/04/2018 10:43:49
+ * Created: 19/04/2018 09:05:20
  *  Author: Dima
  */ 
 
@@ -51,7 +51,6 @@ static char * all_tests()
 	return 0;
 }
 
-#ifdef TEST
 int main()
 {
 	init_stdio(0, 10000000L);
@@ -59,15 +58,14 @@ int main()
 
 	char *result = all_tests();
 	if (result != 0) {
-		printf("error: %s\n", result);
+		printf("error: %s\r\n", result);
 	}
 	else {
 		printf("ALL TESTS PASSED\n");
 	}
 
-	printf("Tests run: %d\n", tests_run);
+	printf("Tests run: %d\r\n", tests_run);
 
 	while(1);
 	return result != 0;
 }
-#endif

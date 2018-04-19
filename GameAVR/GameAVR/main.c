@@ -1,14 +1,14 @@
 /*
- * GameProject.c
+ * GameAVR.c
  *
- * Created: 17/04/2018 10:05:54
+ * Created: 19/04/2018 09:02:19
  * Author : Dima
  */ 
 
 #include <avr/io.h>
 
 
-int main(void)
+int _main(void)
 {
     /* Replace with your application code */
     while (1) 
