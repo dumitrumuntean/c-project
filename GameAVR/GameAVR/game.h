@@ -5,6 +5,9 @@
  *  Author: Dima
  */ 
 
-#include <stdint.h>
+#ifndef GAME_H_
+#define GAME_H_
 
-int16_t add(int16_t a, int16_t b);
+//write your functions here
+
+#endif

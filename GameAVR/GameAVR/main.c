@@ -8,7 +8,7 @@
 #include <avr/io.h>
 
 
-int _main(void)
+int main(void)
 {
     /* Replace with your application code */
     while (1) 

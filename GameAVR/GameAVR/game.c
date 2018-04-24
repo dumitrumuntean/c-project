@@ -5,8 +5,4 @@
  *  Author: Dima
  */ 
 
-#include "game.h";
-
-int16_t add(int16_t a, int16_t b){
-	return a + b;
-}
+#include "game.h"
