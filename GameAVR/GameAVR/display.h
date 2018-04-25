@@ -8,14 +8,13 @@
 #ifndef DISPLAY_H_
 #define DISPLAY_H_
 
-//WRITE YOUR FUNCTIONS HERE
 #include <avr/io.h>
 #include <stdlib.h>
 
 typedef struct display * display_t;
 
-display_t display_create(volatile uint8_t *port);
-void destroy_display(display_t display);
+display_t	display_create(volatile uint8_t *port);
+void		destroy_display(display_t display);
 
 void light_up_led(display_t self, int led_no);
 void light_off_led(display_t self, int led_no);

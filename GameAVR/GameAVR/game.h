@@ -7,12 +7,25 @@
 
 #ifndef GAME_H_
 #define GAME_H_
+#define F_CPU 10000000L
 
-<<<<<<< HEAD:GameProject/GameProject/game.h
-int16_t add(int16_t a, int16_t b);
+#include <stdbool.h>
+#include <util/delay.h>
+#include "display.h"
+#include "keyboard.h"
+#include "sequence.h"
 
-=======
-//write your functions here
+typedef struct game * game_t;
 
+game_t game_create(volatile uint8_t *displat_port, volatile uint8_t *keyboard_port);
+void game_destroy(game_t realgame);
+
+void game_start_pattern(game_t self);
+void game_lost_pattern(game_t self);
+void win_level_pattern(game_t self);
+void next_level(game_t self);
+void restart_game(game_t self);
+
+void game_run(game_t self);
 #endif
->>>>>>> 1c77c0d5f0845e3ffbcd47dcea0fc5b0c88cbe3a:GameAVR/GameAVR/game.h
+

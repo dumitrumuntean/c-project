@@ -177,6 +177,12 @@
     <Compile Include="minunit.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="sequence.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sequence.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="test.c">
       <SubType>compile</SubType>
     </Compile>

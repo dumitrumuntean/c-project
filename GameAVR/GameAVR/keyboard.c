@@ -33,31 +33,35 @@ int get_input(keyboard_t self)
 	int val;
 	unsigned char temp = *(self->pin);
 	
-	while(temp == self->pin);
+	while(temp == *(self->pin));
 
-	if(!(PINB & 0x01))	//1
+	val = pressed_button(self);
+	
+	return val;
+}
+
+int pressed_button(keyboard_t self)
+{
+	int val = -1;
+
+	if(!(*(self->pin) & 0x01))	//1
 	val=0;
-	else if(!(PINB & 0x02))//2
+	else if(!(*(self->pin) & 0x02))//2
 	val=1;
-	else if(!(PINB & 0x04)) //3
+	else if(!(*(self->pin) & 0x04)) //3
 	val=2;
-	else if(!(PINB & 0x08)) // 4
+	else if(!(*(self->pin) & 0x08)) // 4
 	val=3;
-	else if(!(PINB & 0x10))// 5
+	else if(!(*(self->pin) & 0x10))// 5
 	val=4;
-	else if(!(PINB & 0x20)) // 6
+	else if(!(*(self->pin) & 0x20)) // 6
 	val=5;
-	else if(!(PINB & 0x40)) // 7
+	else if(!(*(self->pin) & 0x40)) // 7
 	val=6;
-	else if(!(PINB & 0x80)) // 8
+	else if(!(*(self->pin) & 0x80)) // 8
 	val=7;
 	else
 	val = -1;
 	
 	return val;
-}
-
-unsigned char pressed_button(keyboard_t self)
-{
-	return PINB;
 }

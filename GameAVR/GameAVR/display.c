@@ -8,9 +8,10 @@
 
 #include "display.h"
 
-struct display{
+struct display
+{
 	volatile uint8_t *port;
-	};
+};
 
 display_t display_create(volatile uint8_t *port)
 {
