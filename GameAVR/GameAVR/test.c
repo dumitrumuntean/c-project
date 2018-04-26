@@ -23,4 +23,32 @@
 	  return 0;
  } 
  
+ static char * all_tests()
+ {
+	 display_create(&PORTA);
+
+	 return 0;
+ }
+
+ #ifdef TEST
+ int main()
+ {
+	 init_stdio(0, 10000000L);
+	 sei();
+	 
+	DDRA = 0Xff;
+	
+	 char *result = all_tests();
+	 if (result != 0) {
+		 printf("error: %s\n", result);
+	 }
+	 else {
+		 printf("ALL TESTS PASSED\n");
+	 }
+
+	 printf("Tests run: %d\n", tests_run);
+
+	 while(1);
+	 return result != 0;
+ }
  
