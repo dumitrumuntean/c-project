@@ -7,7 +7,7 @@
 #include <avr/io.h>
 #include "game.h"
 
-int main(void)
+int _main(void)
 {
 	DDRA = 0xff;
 	DDRB = 0;

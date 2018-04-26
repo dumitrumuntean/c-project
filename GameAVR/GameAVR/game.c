@@ -97,7 +97,11 @@ void game_run(game_t self)
 		
 		for(int i = 0; i < self->level; i++)
 		{
+<<<<<<< HEAD
 			int b = (self->seq)->random_pattern[i];
+=======
+			int b = *(self->seq->random_pattern + i);
+>>>>>>> Dumitru
 				light_up_led(self->disp, b);
 		}
 	}
