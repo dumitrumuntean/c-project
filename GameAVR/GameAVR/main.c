@@ -7,12 +7,13 @@
 #include <avr/io.h>
 #include "game.h"
 
-int main(void)
+int _main(void)
 {
 	DDRA = 0xff;
 	DDRB = 0;
 	
 	game_t game = game_create(&PORTA, &PINB);
+	
 	
 	game_start_pattern(game);	
 	

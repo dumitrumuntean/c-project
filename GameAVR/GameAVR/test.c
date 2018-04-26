@@ -15,7 +15,7 @@
  
  int tests_run = 0;
  
- static char * display_create(&PORTA)
+ static char * display_create_test()
  {
 	 DDRA = 0Xff;
 	 display_t result = display_create(&PORTA);
@@ -23,14 +23,17 @@
 	  return 0;
  } 
  
- static char * all_tests()
+ static char *all_tests()
  {
-	 display_create(&PORTA);
+	 display_create_test();
 
 	 return 0;
  }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> b9432d42dfd67629ad743c0922290351d59a244b
  int main()
  {
 	 init_stdio(0, 10000000L);
