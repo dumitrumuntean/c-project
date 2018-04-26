@@ -30,7 +30,7 @@
 	 return 0;
  }
 
- #ifdef TEST
+
  int main()
  {
 	 init_stdio(0, 10000000L);
