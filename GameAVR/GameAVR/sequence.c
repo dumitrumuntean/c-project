@@ -7,11 +7,6 @@
 
 #include "sequence.h"
 
-struct sequence
-{
-	int *random_pattern;
-};
-
 sequence_t	sequence_create()
 {
 	sequence_t seq = (sequence_t)malloc(sizeof(sequence_t));

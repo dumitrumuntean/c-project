@@ -10,6 +10,11 @@
 
 #include<stdlib.h>
 
+struct sequence
+{
+	int *random_pattern;
+};
+
 typedef struct sequence *sequence_t;
 
 sequence_t	sequence_create();
