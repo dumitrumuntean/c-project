@@ -9,10 +9,9 @@
 
 struct game
 {
-	
 	keyboard_t keyb; //keyboard
 	display_t disp;  // display
-	struct sequence seq;
+	sequence_t seq;  // sequence
 	bool isRunning;
 	int level;	
 };
@@ -25,7 +24,8 @@ game_t game_create(volatile uint8_t *displat_port, volatile uint8_t *keyboard_po
 	new_game->isRunning	= true;
 	new_game->keyb		= keyboard_create(keyboard_port);
 	new_game->disp		= display_create(displat_port);
-	new_game->seq		= sequence_create();
+	sequence_t a		= sequence_create();
+	new_game->seq		= a;	
 	
 	return new_game;
 }
@@ -90,14 +90,15 @@ void restart_game(game_t self)
 void game_run(game_t self)
 {
 	game_start_pattern(self);
-	struct sequence seq = self->seq;
-	int *a = seq->random_pattern;
-	
+		
 	while(self->level < 3 && self->isRunning == true)
 	{
 		fill_random_sequence(self->seq, self->level);
 		
 		for(int i = 0; i < self->level; i++)
-			light_up_led(self->disp, 1 );
+		{
+			int b = (self->seq)->random_pattern[i];
+				light_up_led(self->disp, b);
+		}
 	}
 }

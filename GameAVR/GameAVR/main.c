@@ -14,6 +14,7 @@ int main(void)
 	
 	game_t game = game_create(&PORTA, &PINB);
 	
+	
 	game_start_pattern(game);	
 	
     /* Replace with your application code */
