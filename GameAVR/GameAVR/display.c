@@ -21,8 +21,11 @@ display_t display_create(volatile uint8_t *port)
     return new_display;
 }
 
-void destroy_display(display_t display){
-	free(display);
+void destroy_display(display_t self){
+	
+	if(self)
+		free(self);
+	
 	return;
 }
 
@@ -52,4 +55,9 @@ void light_off_all(display_t self)
 {
 	*(self->port)  = 0xff;
 	return;
+}
+
+unsigned char getStatus(display_t self)
+{
+	return ~(*(self->port));
 }

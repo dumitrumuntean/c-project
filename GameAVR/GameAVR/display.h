@@ -10,6 +10,7 @@
 
 typedef struct display * display_t;
  #include <avr/io.h>
+ #include <stdlib.h>
 
 /*
 	Creates a variable of display_t type
@@ -21,7 +22,7 @@ display_t	display_create(volatile uint8_t *port);
 	Clean up the memory which is occupied by 
 	display given as argument;
 */
-void		destroy_display(display_t display);
+void		destroy_display(display_t self);
 
 /*
 	Light up one led;
@@ -52,5 +53,10 @@ void light_up_no(display_t self, int no);
 	@display_t self  : display structure
 */
 void light_off_all(display_t self);
+
+/*
+	Gets current stauts of the leds;
+*/
+unsigned char getStatus(display_t self);
 
 #endif
