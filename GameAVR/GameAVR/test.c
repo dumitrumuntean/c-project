@@ -30,7 +30,7 @@
 	 return 0;
  }
 
- int main()
+ int _main()
  {
 	 init_stdio(0, 10000000L);
 	 sei();
