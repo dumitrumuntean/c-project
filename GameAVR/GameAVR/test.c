@@ -34,7 +34,7 @@ static char * light_up_no_3Test()
 	display_t display = display_create(res);
 	light_off_all(display);
 	light_up_no(display, 3);
-	mu_assert("light_up_no(display,3) != 0b11111010", *res == 0b11111100);
+	mu_assert("light_up_no(display,3) != 0b11111100", *res == 0b11111100);
 	return 0;
 }
 static char * light_Off_led_0Test()
@@ -79,7 +79,7 @@ static char * light_off_all_Test()
 	display_t display = display_create(res);
 	light_up_no(display, 255);
 	light_off_all(display);
-	mu_assert("light_off_led(display, 7); != 0b11111111", *res == 0b11111111);
+	mu_assert("light_off_led(display); != 0b11111111", *res == 0b11111111);
 	return 0;
 }
 

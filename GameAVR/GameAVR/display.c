@@ -56,8 +56,3 @@ void light_off_all(display_t self)
 	*(self->port)  = 0xff;
 	return;
 }
-
-unsigned char getStatus(display_t self)
-{
-	return ~(*(self->port));
-}

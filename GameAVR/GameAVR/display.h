@@ -54,9 +54,4 @@ void light_up_no(display_t self, int no);
 */
 void light_off_all(display_t self);
 
-/*
-	Gets current stauts of the leds;
-*/
-unsigned char getStatus(display_t self);
-
 #endif

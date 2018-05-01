@@ -83,7 +83,6 @@ void game_run(game_t self)
 	int current_level = 1;		//level to begin the game from
 	bool guessed;				// variable used to check whether 
 								// the sequence was guessed or not
-
 	//main loop starts here
 	while(current_level < TOTAL_NO_OF_LEVELS)
 	{

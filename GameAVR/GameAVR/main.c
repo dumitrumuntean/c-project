@@ -20,6 +20,7 @@ int _main(void)
 	DDRB = 0x00;
 
 	srand(time(NULL));
+	
 	game_t game = game_create(&PORTA, &PINB);
 	
 	game_run(game);
