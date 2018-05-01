@@ -4,7 +4,7 @@
  * Created: 19/04/2018 09:05:20
  *  Author: Dima
  */
-#include <test.h>
+#include "test.h"
  
  int tests_run = 0;
  
@@ -83,7 +83,7 @@ static char * light_off_all_Test()
 	return 0;
 }
 
- static char *all_tests()
+ static char * all_tests()
  {
 	mu_run_test(display_create_test);
 	mu_run_test(light_up_no_5Test);
